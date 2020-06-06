@@ -17,7 +17,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/u', 'UserController',)->except([
+Route::resource('/u', 'UserController')->except([
     'create', 'store'
 ]);
 Route::get('/u/{u}/pro', 'UserController@promote')->name('u.promote');
